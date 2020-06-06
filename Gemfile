@@ -9,6 +9,8 @@ gem "haml-rails", "~> 2.0"
 gem 'bootstrap', '~> 4.5.0'
 gem 'simple_form'
 gem 'devise', '~> 4.2'
+gem 'jquery-rails'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
