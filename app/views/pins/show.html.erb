@@ -1,0 +1,10 @@
+<%= cl_image_tag(@pin.photo.key,
+      width: 300, height: 300, crop: :fill) %>
+<h1><%= @pin.title %></h1>
+<p><%= @pin.description %></p>
+<p> Submitted by <%= @pin.user.email %></p>
+
+<br>
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_pin_path %>
+<%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?"} %>

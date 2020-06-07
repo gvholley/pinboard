@@ -15,9 +15,9 @@ class PinsController < ApplicationController
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
-      redirect_to @pin, notice: "Pin created!"
+      redirect_to pin_path(@pin), notice: "Pin created!"
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -40,7 +40,7 @@ class PinsController < ApplicationController
   private
 
   def pin_params
-    params.require(:pin).permit(:title, :description)
+    params.require(:pin).permit(:title, :description, :photo)
   end
 
   def find_pin
