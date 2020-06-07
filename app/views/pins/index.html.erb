@@ -1,4 +1,12 @@
-<% @pins.each do |pin| %>
-<%= link_to (cl_image_tag @pin.photo.key), pin %>
-<h2><%= link_to pin.title, pin %></h2>
+ <% @pins.each do |pin| %>
+<% if pin.photo.attached? %>
+  <%= cl_image_tag pin.photo.key, width: 300, height: 300, crop: :scale %>
+<% else %>
+  <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-img" %>
+<% end %>
+ <div class="card">
+  <div class="card-body">
+    <h2><%= link_to pin.title, pin %></h2>
+  </div>
+</div>
 <% end %>
