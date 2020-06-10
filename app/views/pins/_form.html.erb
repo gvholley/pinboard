@@ -1,6 +1,7 @@
 <%= simple_form_for(@pin) do |f| %>
         <%= f.input :title, required: true, class: "form-control" %>
         <%= f.input :description, required: true, class: "form-control" %>
+        <%= f.input :website, required: true, class: "form-control" %>
         <%= f.input :photo, as: :file, required: true %>
         <%= f.submit "Pin!", class: "btn btn-primary" %>
       <% end %>

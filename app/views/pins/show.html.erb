@@ -7,15 +7,26 @@
     <div class="card-product-infos">
       <h1><%= @pin.title %></h1>
       <p><%= @pin.description %></p>
+      <% if @pin.website? %>
+    <button class="btn draw-border"><%= link_to "View Source", "#{@pin.website}" %></button>
+      <% end %>
       <p><i> Submitted by <%= @pin.user.email %></p></i>
 
       <br>
       <div class="card-links">
-        <%= link_to "Like", like_pin_path(@pin), method: :put %>
+        <%= link_to like_pin_path(@pin), method: :put do%>
+        <% if current_user.voted_for? @pin %>
+              <i class="fas fa-heart redcolor"></i>
+            <% else %>
+              <i class="far fas-heart graycolor"></i>
+            <% end %>
+          <% end %>
         <%= @pin.votes_for.size %>
         <%= link_to "Back", root_path %>
+        <% if user_signed_in? %>
         <%= link_to "Edit", edit_pin_path %>
         <%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?"} %>
+        <% end %>
       </div>
     </div>
   </div>
