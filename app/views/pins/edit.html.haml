@@ -1,6 +1,6 @@
 .container.justify-content-center.col-4
   %h1 Edit Pin
-  = cl_image_tag @pin.photo.key
+  = cl_image_tag @pin.photo.key, width: 300, crop: :fill
   = render 'form'
 
   = link_to "Cancel", pin_path

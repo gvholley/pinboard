@@ -1,10 +1,21 @@
-<%= cl_image_tag(@pin.photo.key,
-      width: 300, height: 300, crop: :fill) %>
-<h1><%= @pin.title %></h1>
-<p><%= @pin.description %></p>
-<p> Submitted by <%= @pin.user.email %></p>
+<div class="container">
+  <div class="card-product">
 
-<br>
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_pin_path %>
-<%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?"} %>
+
+    <%= cl_image_tag(@pin.photo.key,
+    width: 300, crop: :fill) %>
+    <div class="card-product-infos">
+      <h1><%= @pin.title %></h1>
+      <p><%= @pin.description %></p>
+      <p><i> Submitted by <%= @pin.user.email %></p></i>
+
+      <br>
+      <div class="card-links">
+        <%= link_to "Back", root_path %>
+        <%= link_to "Edit", edit_pin_path %>
+        <%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?"} %>
+      </div>
+    </div>
+  </div>
+</div>
+

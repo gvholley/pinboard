@@ -20,10 +20,15 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 const elem = document.querySelector('.container');
-console.log(elem)
 const msnry = new Masonry( elem, {
   // options
   itemSelector: '.card-holder',
   columnWidth: '.card-holder'
 });
+
+imagesLoaded( document.querySelector('.container'), function( instance ) {
+  console.log('all images are loaded');
+});
+
+
 

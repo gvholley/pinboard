@@ -1,24 +1,19 @@
- <div class="container">
-
-    <ul class="card-grid">
-     <% @pins.each do |pin| %>
-
-<div class="card-holder">
-  <a href="<%= pin_path(pin) %>">
-      <% if pin.photo.attached? %>
-      <li class="card"><%= cl_image_tag pin.photo.key, width: 300, height: 300, crop: :fill %>
+<div class="container" id="indexcon">
+  <ul class="card-grid">
+   <% @pins.each do |pin| %>
+    <div class="card-holder">
+      <a href="<%= pin_path(pin) %>">
+        <% if pin.photo.attached? %>
+          <li class="card" id="indexcard"><%= cl_image_tag pin.photo.key, width: 300, crop: :fill %>
         <% else %>
-        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-img" %>
+          <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-img" %>
         <% end %>
         <div class="photobottom"><h2><%= link_to pin.title, pin %></h2></div>
       </a>
-      </li>
-    </div>
-
-
-
-    <% end %>
-    </ul>
-  </div>
+          </li>
+        </div>
+        <% end %>
+  </ul>
+</div>
 
 
