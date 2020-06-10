@@ -19,8 +19,11 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-$('.card-holder').masonry({
+const elem = document.querySelector('.container');
+console.log(elem)
+const msnry = new Masonry( elem, {
   // options
-  itemSelector: '.card',
-  columnWidth: 200
+  itemSelector: '.card-holder',
+  columnWidth: '.card-holder'
 });
+
