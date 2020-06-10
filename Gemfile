@@ -15,6 +15,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 gem 'pg'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
