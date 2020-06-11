@@ -39,15 +39,18 @@ ul {
 .card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    display: inline-block;
+    justify-content: center;
+
 }
+
 
 
 #indexcon {
-   display: flex;
-   justify-content: center;
-   align-items: baseline;
-   margin: 0 auto;
+  margin: 0 auto;
+
 }
+
 
 .card-holder {
   margin: 10px;

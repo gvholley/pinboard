@@ -10,8 +10,9 @@
 
 .card-product img {
   height: 100%;
-
-  object-fit: cover;
+  width: 50%;
+  object-fit: contain;
+  background-color: black;
 }
 
 .card-product h1 {

@@ -28,7 +28,8 @@ document.addEventListener('turbolinks:load', () => {
     const msnry = new Masonry( elem, {
       // options
       itemSelector: '.card-holder',
-      columnWidth: '.card-holder'
+      columnWidth: '.card-holder',
+      fitWidth: true
     });
   });
 });
