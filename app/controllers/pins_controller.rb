@@ -38,7 +38,7 @@ class PinsController < ApplicationController
   end
 
   def upvote
-    @pin.upvote_by current_user
+    @pin.upvote_by current_or_guest_user
     redirect_to @pin
   end
 

@@ -19,16 +19,16 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-const elem = document.querySelector('.container');
-const msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.card-holder',
-  columnWidth: '.card-holder'
+
+
+document.addEventListener('turbolinks:load', () => {
+  imagesLoaded( document.querySelector('.container'), function( instance ) {
+    console.log('all images are loaded');
+    const elem = document.querySelector('.container');
+    const msnry = new Masonry( elem, {
+      // options
+      itemSelector: '.card-holder',
+      columnWidth: '.card-holder'
+    });
+  });
 });
-
-imagesLoaded( document.querySelector('.container'), function( instance ) {
-  console.log('all images are loaded');
-});
-
-
-

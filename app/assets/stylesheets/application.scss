@@ -23,6 +23,18 @@
 
 
 
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #e0212d;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #800000;
+  color: white;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
