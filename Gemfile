@@ -18,7 +18,6 @@ gem 'acts_as_votable'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'devise-guests', '~> 0.5.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
